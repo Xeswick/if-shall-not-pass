@@ -1,5 +1,6 @@
 package com.in2circle.edu.ifshallnotpass;
 
+
 /**
  * @author Alexander Czar
  */
@@ -15,5 +16,8 @@ public class MessageA extends Message {
 		return addressee;
 	}
 
-	// TODO: your code can be here
+	public void process(MessageProcessor processor){
+                System.out.println("sadasd");
+		processor.processMessage(this);
+	}
 }

@@ -21,7 +21,8 @@ public class Runner {
 			new MessageC("66302517-f285-4e1d-aa5e-9f793a474d6e", "MEDIUM"));
 
 	public static void main(String... args) {
-		messages.forEach(Runner::process);
+		//messages.forEach(Runner::process);
+		for(int i = 0; i < messages.size(); i++) process(messages.get(i));
 		/*
 				Line above is an iteration utilizing Java8 'stream' and 'method reference' features.
 			it can be expanded to messages.forEach(message -> process(message)) - using a lambda
@@ -39,7 +40,7 @@ public class Runner {
 	 * @param message the message to process.
 	 */
 	private static void process(Message message) {
-		// TODO: your code can be here
+		message.process(processor);
 		printDelimiter();
 	}
 

@@ -1,10 +1,5 @@
 package com.in2circle.edu.ifshallnotpass;
 
-/**
- * Base class for all message types
- *
- * @author Alexander Czar
- */
 public abstract class Message {
 	public final String id;
 
@@ -25,6 +20,6 @@ public abstract class Message {
 	public void markAsProcessed() {
 		System.out.format("Message with id '%s' has been marked as processed.\n", id);
 	}
-
-	// TODO: your code can be here
+	
+	abstract void process(MessageProcessor processor);
 }

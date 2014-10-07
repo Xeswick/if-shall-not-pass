@@ -15,5 +15,7 @@ public class MessageC extends Message {
 		return priority;
 	}
 
-	// TODO: your code can be here
+	public void process(MessageProcessor processor){
+		processor.processMessage(this);
+	}
 }
